@@ -2,10 +2,10 @@ import { ActionType } from "../action-types";
 import { Dispatch } from "redux";
 import { Action } from "../actions";
 
-export const depositMoney = (amount: number) => {
+export const eighteen = (amount: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
-      type: ActionType.DEPOSIT,
+      type: ActionType.EIGHTEEN,
       payload: amount,
     });
   };

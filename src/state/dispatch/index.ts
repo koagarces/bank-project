@@ -5,7 +5,7 @@ import { Action } from "../actions/index";
 export const depositMoney = (amount: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
-      type: ActionType.DEPOSIT,
+      type: ActionType.EIGHTEEN,
       payload: amount,
     });
   };
