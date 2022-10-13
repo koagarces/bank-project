@@ -1,5 +1,7 @@
 export enum ActionType {
   EIGHTEEN = "eighteen",
-  WITHDRAW = "withdraw",
+  INPUTPERCENTAGE = "inputPercentage",
+  PERCENTAGE = "percentage",
   BANKRUPT = "bankrupt",
+  CUSTOMTOTAL = "customTotal",
 }

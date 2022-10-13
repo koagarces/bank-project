@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./styles/App.css";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators, State } from "./state";
 import ByPercent from "./components/bypercent";
+import styled from "styled-components";
 
-function App() {
+//styles
+const SiteName = styled.div`
+  color: White;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 5%;
+`;
+
+const App: React.FC = () => {
+  //Redux Tools
   const dispatch = useDispatch();
-  const amount = useSelector((state: State) => state.bank);
-
-  const { eighteen, withdrawMoney, bankrupt } = bindActionCreators(
+  const amount = useSelector((state: State) => state.tip);
+  const { eighteen, inputPercentage, bankrupt } = bindActionCreators(
     actionCreators,
     dispatch
   );
+
+  useEffect(() => {
+    console.log("amount changed");
+  }, [amount]);
   return (
     <div className="App">
-      <h1>{amount}</h1>
+      <SiteName>tip'em</SiteName>
+
       <ByPercent />
-      {/* <button onClick={() => eighteen()}>Deposit</button> */}
-      {/* <button onClick={() => withdrawMoney(500)}>Withdraw</button>
-      <button onClick={() => bankrupt()}>Bankrupt!</button> */}
     </div>
   );
-}
+};
 
 export default App;

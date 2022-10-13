@@ -5,8 +5,8 @@ interface EighteenAction {
   payload: number;
 }
 
-interface WithdrawAction {
-  type: ActionType.WITHDRAW;
+interface InputPercentageAction {
+  type: ActionType.INPUTPERCENTAGE;
   payload: number;
 }
 
@@ -14,4 +14,17 @@ interface BankruptAction {
   type: ActionType.BANKRUPT;
 }
 
-export type Action = EighteenAction | WithdrawAction | BankruptAction;
+interface PercentageAction {
+  type: ActionType.PERCENTAGE;
+  payload: number;
+}
+
+interface customTotal {
+  type: ActionType.CUSTOMTOTAL;
+  payload: number;
+}
+export type Action =
+  | EighteenAction
+  | InputPercentageAction
+  | BankruptAction
+  | PercentageAction;

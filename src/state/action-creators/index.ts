@@ -11,10 +11,10 @@ export const eighteen = (amount: number) => {
   };
 };
 
-export const withdrawMoney = (amount: number) => {
+export const inputPercentage = (amount: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
-      type: ActionType.WITHDRAW,
+      type: ActionType.INPUTPERCENTAGE,
       payload: amount,
     });
   };
@@ -24,6 +24,15 @@ export const bankrupt = () => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.BANKRUPT,
+    });
+  };
+};
+
+export const Percentage = (percent: number) => {
+  return (dispatch: Dispatch<Action>) => {
+    dispatch({
+      type: ActionType.PERCENTAGE,
+      payload: percent,
     });
   };
 };

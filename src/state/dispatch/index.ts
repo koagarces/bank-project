@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import { ActionType } from "../action-types";
 import { Action } from "../actions/index";
 
-export const depositMoney = (amount: number) => {
+export const eighteenPercent = (amount: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.EIGHTEEN,
@@ -11,16 +11,24 @@ export const depositMoney = (amount: number) => {
   };
 };
 
-export const withdrawMoney = (amount: number) => {
+export const anyPercent = (amount: number) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
-      type: ActionType.WITHDRAW,
+      type: ActionType.INPUTPERCENTAGE,
       payload: amount,
     });
   };
 };
 
-export const bakrupt = () => {
+export const bankrupt = () => {
+  return (dispatch: Dispatch<Action>) => {
+    dispatch({
+      type: ActionType.BANKRUPT,
+    });
+  };
+};
+
+export const percentage = () => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.BANKRUPT,

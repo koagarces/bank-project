@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import bankReducer from "./bankReducer";
+import tipReducer from "./bankReducer";
+import percentReducer from "./percentReducer";
 
 const reducers = combineReducers({
-  bank: bankReducer,
+  tip: tipReducer,
+  percent: percentReducer,
 });
 
 export default reducers;
