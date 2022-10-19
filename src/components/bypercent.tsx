@@ -13,26 +13,17 @@ const TipPage = styled.div`
 `;
 
 const TipPercent = styled.input`
-  /* background-color: black;
-  color: white;
-  border: none;
-  text-align: center; */
   background-color: black;
   color: rgb(255, 255, 255);
   border: none;
-  /* border-color: rgb(255, 255, 255); */
-  /* border: border-box; */
-  /* border-width: 2px; */
   text-align: center;
   font-size: 20px;
   padding: 0px;
-  /* border-radius: 10%; */
   width: 100px;
   height: 150px;
 `;
 
 const InputsAndButtons = styled.h2`
-  /* display: flex; */
   flex-direction: column;
 `;
 
