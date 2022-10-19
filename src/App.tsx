@@ -11,9 +11,9 @@ import styled from "styled-components";
 const SiteName = styled.div`
   color: White;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   margin: 0;
-  margin-top: 5%;
+  margin-top: 10%;
 `;
 
 const App: React.FC = () => {
